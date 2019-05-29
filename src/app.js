@@ -28,6 +28,11 @@ class HelloMessage extends React.Component {
         <Header/>
         <div className="container">
             <h1>Hi {this.props.name}</h1>
+            {todos.map((todo)=> {
+              return <li key={todo.id}>
+                <span>{todo.title}</span>
+              </li>
+            })}
         </div>
       </div>
     );
@@ -35,4 +40,4 @@ class HelloMessage extends React.Component {
 }
 
 const App = document.getElementById("app");
-ReactDOM.render(<HelloMessage name="Caesar" />, App);
+ReactDOM.render(<HelloMessage name="Johnnyyu" />, App);
