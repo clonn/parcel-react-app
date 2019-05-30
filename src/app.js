@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Header from './components/Header';
+import Todo from './components/Todo';
 import api from './api/base';
 
 
@@ -26,6 +27,7 @@ class HelloMessage extends React.Component {
     return (
       <div>
         <Header/>
+        <Todo todos = {todos} />
         <div className="container">
             <h1>Hi {this.props.name}</h1>
         </div>
@@ -35,4 +37,4 @@ class HelloMessage extends React.Component {
 }
 
 const App = document.getElementById("app");
-ReactDOM.render(<HelloMessage name="Caesar" />, App);
+ReactDOM.render(<HelloMessage name="Liuliu" />, App);

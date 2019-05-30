@@ -1,0 +1,27 @@
+.todoColorChecked {
+    background-color : #feba02;
+}
+.todoColorUnchecked {
+    background-color : #ffcc2f;
+}
+.todoTemplate {
+    padding : 10px;
+    border : 1px black solid;
+    font-size : 22px;
+}
+.checkBoxPosition {
+    float : right;
+    zoom : 1.8;
+}
+
+.textCenter {
+    text-align : center;
+}
+
+.padLeft {
+    padding-left : 5%;
+}
+
+.padRight {
+    padding-right : 5%;
+}
