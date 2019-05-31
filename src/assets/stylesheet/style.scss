@@ -5,28 +5,3 @@ h1 {
 li {
   border: 1px solid #0f0;
 }
-
-td {
-	border: 1px #cccccc solid;
-}
-
-td:nth-child(1) {
-	line-height: 0;
-}
-
-td img {
-	width: 100px;
-	height: 148px;
-}
-
-.movie-info {
-	margin: 0 0 0 10px;
-	border: 1px #cccccc solid;
-	border-spacing: 0;
-}
-
-.text-line {
-	width: 600px;
-	margin: 0 8px 0 8px;
-	line-height: 36px;
-}
