@@ -1,0 +1,22 @@
+.todoTemplate {
+    padding : 10px;
+    border : 1px black solid;
+    font-size : 22px;
+    background-color : #ffcc2f;
+}
+.checkBoxPosition {
+    float : right;
+    zoom : 1.8;
+}
+.todoTemplate:nth-child(even) {
+    background-color : #feba02;
+}
+.textCenter {
+    text-align : center;
+}
+.padLeft-5 {
+    padding-left : 5%;
+}
+.padRight-5 {
+    padding-right : 5%;
+}

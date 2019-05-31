@@ -1,35 +1,33 @@
 import React from 'react'
-import '../assets/css/todo.css'
+import '../style/todo.css'
 
 export default class Todo extends React.Component {
     constructor (props) {
-        super(props);
-        this.state = {
-            colorChecked : "todoColorChecked",
-            colorUnchecked : "todoColorUnchecked"
-        }
+        super(props)
+        
+        this.colorChecked = "todoColorChecked"
+        this.colorUnchecked = "todoColorUnchecked"
     }
 
     bindCheckBox (inputId) {
-        const input = document.getElementById(inputId);
+        const input = document.getElementById(inputId)
         input.checked = !input.checked
     }
 
     render() {
         const {todos} = this.props
+
         return (
             <div>
                 <h1 className = "textCenter">Todo List</h1>
-                <ol className = "padLeft padRight">
+                <ol className = "padLeft-5 padRight-5">
                     {todos.map( (todo) => {
                         const todoInputId = `todo_${todo.id}`
-                        let color = this.state.colorUnchecked
                         let checked = false
-                        if (todo.id % 2) color = this.state.colorChecked
                         if (todo.completed) checked = true
 
                         return (
-                            <li className = {"todoTemplate " + color} onClick = {this.bindCheckBox.bind(this, todoInputId)}>
+                            <li className = "todoTemplate" onClick = {this.bindCheckBox.bind(this, todoInputId)}>
                                 {todo.title}
                                 <input id = {todoInputId} className = "checkBoxPosition" type="checkbox" defaultChecked = {checked} />
                             </li> 
@@ -40,6 +38,7 @@ export default class Todo extends React.Component {
         );
     }
 }
+
 
 // export default class Todo extends React.Component {
     
