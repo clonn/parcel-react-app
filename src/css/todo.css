@@ -1,0 +1,7 @@
+.todo-item {
+    list-style: none;
+}
+
+.todo-list {
+    cursor: pointer;
+}
