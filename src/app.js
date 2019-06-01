@@ -15,34 +15,51 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
+    this.getMovieByKeyWord = this.getMovieByKeyWord.bind(this);
     this.state = {
       todos: [],
       movies: [],
-      isloader: true
+      isloader: true,
+      keyword: "batman",
+      isGet: false
     }
   }
 
   async componentDidMount() {
     const data = await api.reloadTodoDatas();
-    const movies = await api.getMovieData();
-    const movieList = await this.getMovieData(movies);
-    this.setState({
-      todos: data,
-      movies: movieList,
-      isloader: false
-    })
-    
+    const movies = await api.getMovieData(this.state.keyword);
+    if (movies.Response == "True") {
+      this.setState({
+        todos: data,
+        movies: movies.Search,
+        isloader: false,
+        isGet: true
+      })
+    }   
   }
 
-  async getMovieData(movies) {
-    let movieList = [];
-  
-     movies.forEach(async(movie)=> {
-      let data =await api.getMovieById(movie.imdbID)
-      movieList.push(data);
-    });
-   
-    return movieList;
+
+  async getMovieByKeyWord(key) {
+    this.setState({
+      movies: [],
+      isloader: true,
+      keyword: key,
+      isGet: false
+    })
+    const movies = await api.getMovieData(key);
+    if (movies.Response == "True") {
+      this.setState({
+        movies: movies.Search,
+        isloader: false,
+        isGet: true
+      })
+    } else {
+      this.setState({
+        isloader: false,
+        keyword: "",
+        isGet: false
+      })
+    }  
   }
 
 
@@ -60,7 +77,7 @@ class App extends React.Component {
                 <div>
                   <Switch>
                     <Route exact path="/" render={() => <TodoList {...this.state} />}/>
-                    <Route exact path="/movies"  render={() => <MovieList {...this.state}/>}/>  
+                    <Route exact path="/movies"  render={() => <MovieList keyword={this.state.keyword} search={this.getMovieByKeyWord} {...this.state}/>}/>  
                   </Switch>
                 </div>
               )}
