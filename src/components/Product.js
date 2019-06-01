@@ -30,7 +30,7 @@ export default class Product extends React.PureComponent {
                                 )
                             })}
                     </div>);
-        } else return <div>ERROR OCCUR</div>
+        } else return <div>Component Data Is Loading...</div>
     }
 }
 
