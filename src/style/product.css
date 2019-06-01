@@ -6,16 +6,21 @@
 .listTemplate:nth-child(even) {
     background-color : #fafafa;
 }
+
 .verticalCenter {
     margin-left : 10px;
     position : absolute;
     top : 50%;
-    transform : translateY(-50%);
+    transform : translate(0, -50%);
 }
 .linkNoUnderLine {
     color : #035daf;
     text-decoration: none;
 }
+
 .linkNoUnderLine:hover {
     color : red;
+}
+.listTemplate:hover {
+    zoom : 1.5;
 }
