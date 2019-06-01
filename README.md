@@ -1,47 +1,14 @@
-# parcel-react-app
+awoo react homework
+===
 
-it is reference to parcel-react, and it includes
+###### `嘉義Johnny yu`
 
- * es6
- * es7
- * async / await
- * axios
- * react and react dom
+use `material-ui`
 
-## install
+## TodoList
+![](https://media.giphy.com/media/JNmqzJnswUYuoccyNC/giphy.gif)
 
- * node v10.15.x is required
- * npm 6.5.x is required
+## MovieList
+![](https://media.giphy.com/media/dTVZfFYNq7QFko7Y9r/giphy.gif)
 
-## start
-
-```
-$ cd $PROJECT_ROOT_PATH
-$ npm install
-$ npm start
-```
-
-it will start a server with `3000` port
-
-```
-$ open http://localhost:3000
-```
-
-## build
-
-```
-npm run build
-```
-
-and you can build with no-minify or no-cache
-
-```
-npm run build:no-cache
-npm run build:no-minify
-```
-
-## LICENSE
-
-MIT
-Auth: clonn
 
