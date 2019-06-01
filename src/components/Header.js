@@ -23,7 +23,7 @@ const Header = () => {
             <AppBar position="static">
                 <Tabs value={value} onChange={handleChange}>
                     <Tab label="TodoList" to='/' component={Link} />
-                    <Tab label="MovieOMdb" to='/Movie' component={Link} />
+                    <Tab label="MovieList" to='/movies' component={Link} />
                 </Tabs>
             </AppBar>
         </header>

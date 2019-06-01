@@ -1,0 +1,36 @@
+.movieList {
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+.moive-img {
+    width: 100px;
+}
+
+.movieList tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.movieList tr:hover {
+    background-color: #ddd;
+}
+
+.star-icon {
+    color: #fad673;
+}
+
+.movieList .title {
+    width: 600px;
+}
+
+.movieList .logo {
+    width: 110px;
+}
+
+.movieList .rank {
+    width: 40px;
+}
+
+.movieList .score {
+    font-size: 16px;
+}
