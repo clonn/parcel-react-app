@@ -25,6 +25,7 @@ export default class Product extends React.PureComponent {
                                         <strong className = "verticalCenter">
                                             <a className = "linkNoUnderLine" href = {movie.Poster} target = "_blank"> {movie.Title} </a>
                                             ( {movie.Year} )
+                                            ( {movie.Type} )
                                         </strong>
                                     </div>
                                 )
