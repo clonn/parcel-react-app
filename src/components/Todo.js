@@ -27,7 +27,7 @@ export default class Todo extends React.Component {
                         if (todo.completed) checked = true
 
                         return (
-                            <li className = "todoTemplate" onClick = {this.bindCheckBox.bind(this, todoInputId)}>
+                            <li className = "todoTemplate cursorPoint hoverZoom" onClick = {this.bindCheckBox.bind(this, todoInputId)}>
                                 {todo.title}
                                 <input id = {todoInputId} className = "checkBoxPosition" type="checkbox" defaultChecked = {checked} />
                             </li> 
