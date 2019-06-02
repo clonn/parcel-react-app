@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import api from '../api/base';
 
-
 const Movie = ({ imdbID:id, Title:title, Year:year, Poster:img, ...props }) => {
 
     const openSite = (e, src) => {

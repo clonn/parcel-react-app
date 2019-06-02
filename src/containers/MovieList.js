@@ -3,7 +3,6 @@ import Movie from '../components/Movie';
 import SearchBar from '../components/SearchBar';
 import "../css/movie.css";
 
-
 const MovieList = ({ movies, ...props }) => {
     return (
         <div>

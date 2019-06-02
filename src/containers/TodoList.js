@@ -3,8 +3,6 @@ import Todo from '../components/Todo';
 import List from '@material-ui/core/List';
 import '../css/todo.css';
 
-
-
 const TodoList = ({ todos }) => {
     return (
         <List className="todo-list">
@@ -14,7 +12,6 @@ const TodoList = ({ todos }) => {
                 })
             }
         </List>
-
     )
 }
 

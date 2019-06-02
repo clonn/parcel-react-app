@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: theme.palette.background.paper,
     },
   }));
+
 const Header = () => {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
@@ -18,6 +19,7 @@ const Header = () => {
     function handleChange(event, newValue) {
         setValue(newValue);
     }
+    
     return (
         <header className={classes.root}>
             <AppBar position="static">
