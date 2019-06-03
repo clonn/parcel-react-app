@@ -1,0 +1,54 @@
+.prods {
+    margin: 8%;
+}
+
+.prods-head {
+    color:#ffff;
+    background-color: rgb(40, 38, 37);
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3% 0 3%;
+    margin: 0;
+}
+
+.prods-title {
+    font-size: 23px;
+}
+
+.search-type {
+    font-size: 20px;
+    color: rgb(247, 37, 33);
+}
+
+.prods-content ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.prods-content ul li {
+    font-size: 20px;
+    margin: 1px 0 1px 0;
+}
+
+.prod-info {
+    display: flex;
+    align-items: center;
+}
+
+.prod-info span {
+    padding-left: 5px;
+}
+
+.prod-info a {
+    text-decoration: none;
+}
+
+.prod-line1 {
+    background-color: rgb(255, 255, 231);
+}
+
+.prod-line2 {
+    background-color: rgb(238, 238, 238);
+}

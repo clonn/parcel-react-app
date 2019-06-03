@@ -1,38 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Header from './components/Header';
-import api from './api/base';
-
-
+import Todo from './components/Todo';
+import Product from './components/Product';
 
 class HelloMessage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: []
-    };
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  async componentDidMount() {
-    const todos = await api.reloadTodoDatas();
-    this.setState({
-      todos
-    });
-  }
-
-  render() {
-    const { todos } = this.state;
-    return (
-      <div>
-        <Header/>
-        <div className="container">
-            <h1>Hi {this.props.name}</h1>
-        </div>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <Product/>
+                <Todo/>
+            </div>
+        );
+    }
+    
+    
 }
 
 const App = document.getElementById("app");
-ReactDOM.render(<HelloMessage name="Caesar" />, App);
+ReactDOM.render(<HelloMessage/>, App);
