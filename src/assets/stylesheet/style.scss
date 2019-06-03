@@ -3,5 +3,23 @@ h1 {
 }
 
 li {
-  border: 1px solid #0f0;
+  border: 1px solid rgb(119, 0, 255);
+  font-size: 18px;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.list {
+  border: 1px solid;
+  color: brown;
+  font-size: 20px;
+  padding: 5px;
+}
+
+table, th, td {
+  border: 1px solid blue;
 }
