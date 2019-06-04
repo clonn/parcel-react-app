@@ -1,4 +1,5 @@
 # parcel-react-app
+`Auth by Liuliu`
 
 it is reference to parcel-react, and it includes
 
@@ -7,6 +8,13 @@ it is reference to parcel-react, and it includes
  * async / await
  * axios
  * react and react dom
+
+# DEMO
+## Todo List
+![](https://media.giphy.com/media/Tk2KNru0pYD6dHxSB1/giphy.gif)
+## OMDB API
+![](https://media.giphy.com/media/3XDiHqGVO48qghRTwi/giphy.gif)
+
 
 ## install
 
