@@ -2,12 +2,12 @@
     padding : 10px;
     border : 1px black solid;
     font-size : 22px;
-    background-color : #ffcc2f;
+    background-color : #a8ff2f80;
 }
 .checkBoxPosition {
     float : right;
     zoom : 1.8;
 }
 .todoTemplate:nth-child(even) {
-    background-color : #feba02;
+    background-color : #e9fe02a3;
 }

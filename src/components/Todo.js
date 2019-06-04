@@ -20,7 +20,7 @@ export default class Todo extends React.Component {
 
         return (
             <div>
-                <h1 className = "textCenter">Todo List</h1>
+                {/* <h1 className = "textCenter">Todo List</h1> */}
                 <ol className = "padLeft-5 padRight-5">
                     {todos.map( (todo) => {
                         const todoInputId = `todo_${todo.id}`

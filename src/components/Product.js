@@ -15,7 +15,7 @@ export default class Product extends React.PureComponent {
 
         if (movies.Search) {
             return (<div>
-                        <h1>Movie List</h1>
+                        {/* <h1>Movie List</h1> */}
                             {movies.Search.map( (movie) => {
                             
                                 return (

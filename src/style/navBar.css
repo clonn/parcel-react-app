@@ -3,8 +3,8 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    background-color: bisque;
-    border: 2px solid #123456;
+    background-color: #f9f10baf;
+    border: 3px solid #123456;
     border-radius: 15px;
 
     margin : 0 0 3% 0;
@@ -16,9 +16,9 @@
     text-align: center;
     line-height: 50px;
     font-size: 20px;
-    border-right: 2px solid #896745;
-    border-bottom: 2px solid #896745;
-    border-radius : 15px;
+    border-right: 2px solid #f9ae0ba7;
+    border-bottom: 2px solid #f9ae0ba7;
+    border-radius : 13px;
     
     justify-content: flex-start;
     align-items: center;
@@ -28,7 +28,6 @@
 .item:hover {
     transform: scale(1.05, 1.2);
 
-    background-color: #896644;
-    color: white;
+    background-color: #f9ae0bd4;
     font-size: 26px;
 }

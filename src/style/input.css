@@ -22,4 +22,6 @@ input[type = "search"]::-webkit-search-cancel-button {
 
 .inputDiv {
     height: 40px;
+
+    margin : 0 0 2% 0;
 }
