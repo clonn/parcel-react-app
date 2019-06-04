@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/todo.css';
 import "../css/movie.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,9 +11,9 @@ const Movie = ({ imdbID:id, Title:title, Year:year, Poster:img, ...props }) => {
         window.open(src, '_blank');
     }
 
-    const [rate, setRate] = React.useState(0);
+    const [rate, setRate] = useState(0);
 
-    React.useEffect(() => {
+    useEffect(() => {
         async function fetchData() {
             const data = await api.getMovieById(id);
             setRate(data.imdbRating)

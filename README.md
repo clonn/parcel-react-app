@@ -48,7 +48,7 @@ $ npm run build
 
 or
 
-$ yan run build
+$ yarn run build
 ```
 
 ## TodoList
