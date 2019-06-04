@@ -11,18 +11,3 @@
 .todoTemplate:nth-child(even) {
     background-color : #feba02;
 }
-.textCenter {
-    text-align : center;
-}
-.padLeft-5 {
-    padding-left : 5%;
-}
-.padRight-5 {
-    padding-right : 5%;
-}
-.cursorPoint {
-    cursor : pointer;
-}
-.hoverZoom:hover {
-    zoom : 1.5;
-}

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../style/product.css'
+import '../style/extra.css'
 
 export default class Product extends React.PureComponent {
     constructor (props) {
@@ -29,7 +30,7 @@ export default class Product extends React.PureComponent {
                                 )
                             })}
                     </div>);
-        } else return <div>Component Data Is Loading...</div>
+        } else return <div>Waiting...</div>
     }
 }
 
