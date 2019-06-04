@@ -6,7 +6,7 @@ import api from './api/base';
 import InputSearch from "./components/InputSearch"
 import Movie from "./api/movie";
 import Product from "./components/Product";
-import Product_2 from "./components/Product_2";
+import NavBar from "./components/NavBar"
 
 
 
@@ -14,9 +14,12 @@ class HelloMessage extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.pageList = ["Movie", "Todo"];
     this.state = {
       todos: [],
       movies: [],
+      showPage: "Movie",
     };
 
   }
@@ -26,6 +29,12 @@ class HelloMessage extends React.Component {
 
     this.setState({
       movies: await Movie.requestMovieInfo(kwd)
+    })
+  }
+
+  setShowPage (pageName) {
+    this.setState({
+      showPage : pageName
     })
   }
 
@@ -43,15 +52,38 @@ class HelloMessage extends React.Component {
     const { todos } = this.state
     const { movies } = this.state
     
+    let show = ''
+
+    switch (this.state.showPage) {
+      case "Todo" :
+        show =  <Todo todos = {todos} />
+        break
+
+      case "Movie" :
+        show =  <div>
+                <InputSearch inputKwd = {(kwd) => this.searchKwd(kwd)} />
+                <Product movies = {movies} />
+                </div>
+        break
+      
+      default :
+        show = <div>
+                  <h1>Something Wrong...</h1>
+                </div>
+    }
+    
+    if (this.state.showPage == "todo") {
+      show =  <Todo todos = {todos} />
+    }
+                
     return (
       <div>
-        <Header/>
-        <InputSearch inputKwd = { (kwd) => this.searchKwd(kwd)} />
-        {/* <Todo todos = {todos} /> */}
-        <Product movies = {movies} />
-        {/* <Product_2 movies = {movies} /> */}
+        <NavBar pageList = {this.pageList} setChoose = {(pageName) => this.setShowPage(pageName)}/>       
+        {/* <Header/> */}
         <div className="container">
-            <h1>Hi {this.props.name}</h1>
+          {show}
+
+          <p>by {this.props.name}.</p>
         </div>
       </div>
     );
