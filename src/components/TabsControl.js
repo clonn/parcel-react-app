@@ -17,7 +17,7 @@ let TabsControl = createReactClass({
         return (
             <div>
                 <nav className="tab-title-items">
-                    
+
                     {React.Children.map(this.props.children, (element, index) => {
                         return (<div onClick={() => { this.setState({ currentIndex: index }) }} className={that.getTitleItemCssClasses(index)}>{element.props.name}</div>)
                     })}
@@ -43,5 +43,4 @@ let Tab = createReactClass({
 module.exports = {
     TabsControl,
     Tab,
-
 };

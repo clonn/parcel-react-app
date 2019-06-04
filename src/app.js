@@ -23,11 +23,11 @@ class HelloMessage extends React.Component {
 	
 	async componentDidMount() {
 		const todos = await api.reloadTodoDatas();
-		const OmDb = await api.reloadOmDbApi();
+		const { Search: omdblist} = await api.reloadOmDbApi();
 		
 		this.setState({
 			"todos": todos,
-			"omdblist": OmDb.Search 
+			"omdblist": omdblist,
 		})
 	}
 
@@ -50,7 +50,7 @@ class HelloMessage extends React.Component {
 							</ul>
 						</div>
 					</Tab>
-					<Tab name="secont">
+					<Tab name="second">
 						<table>
 							<tbody>
 							{
