@@ -72,9 +72,14 @@ class HelloMessage extends React.Component {
                 </div>
     }
     
-    if (this.state.showPage == "todo") {
-      show =  <Todo todos = {todos} />
-    }
+    this.setState({
+      todos,
+      movies
+    });
+  }
+
+  render() {
+    const show = this.pageSwitch()
                 
     return (
       <div>
