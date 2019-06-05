@@ -38,20 +38,8 @@ class HelloMessage extends React.Component {
     })
   }
 
-  async componentDidMount() {
-    const todos = await api.reloadTodoDatas();
-    const movies = await Movie.requestMovieInfo()
-    
-    this.setState({
-      todos,
-      movies
-    });
-  }
-
-  render() {
-    const { todos } = this.state
-    const { movies } = this.state
-    
+  pageSwitch () {
+    const { todos, movies } = this.state
     let show = ''
 
     switch (this.state.showPage) {
@@ -61,8 +49,8 @@ class HelloMessage extends React.Component {
 
       case "Movie" :
         show =  <div>
-                <InputSearch inputKwd = {(kwd) => this.searchKwd(kwd)} />
-                <Product movies = {movies} />
+                  <InputSearch inputKwd = {(kwd) => this.searchKwd(kwd)} />
+                  <Product movies = {movies} />
                 </div>
         break
       
@@ -71,6 +59,13 @@ class HelloMessage extends React.Component {
                   <h1>Something Wrong...</h1>
                 </div>
     }
+
+    return show
+  }
+
+  async componentDidMount() {
+    const todos = await api.reloadTodoDatas();
+    const movies = await Movie.requestMovieInfo();
     
     this.setState({
       todos,
