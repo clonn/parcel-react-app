@@ -13,8 +13,9 @@ export default class Product extends React.PureComponent {
     render () {
         let { movies } = this.props
 
-        if (movies.Search) {
-            return (<div>
+        
+            return (movies.Search ?
+                    (<div>
                         {/* <h1>Movie List</h1> */}
                             {movies.Search.map( (movie) => {
                             
@@ -29,11 +30,8 @@ export default class Product extends React.PureComponent {
                                     </div>
                                 )
                             })}
-                    </div>);
-        } else return <div>Waiting...</div>
+                    </div>) :
+                    (<div>Waiting...</div>)
+            )
     }
-}
-
-Product.defaultProps = {
-    movies : [],
 }
