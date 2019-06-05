@@ -24,11 +24,11 @@ class HelloMessage extends React.Component {
 
   }
 
-  async searchKwd (kwd) {
-    if (!kwd) kwd = "banana";
+  async searchKwd (keyword) {
+    if (!keyword) keyword = "banana";
 
     this.setState({
-      movies: await Movie.requestMovieInfo(kwd)
+      movies: await Movie.requestMovieInfo(keyword)
     })
   }
 
@@ -49,7 +49,7 @@ class HelloMessage extends React.Component {
 
       case "Movie" :
         show =  <div>
-                  <InputSearch inputKwd = {(kwd) => this.searchKwd(kwd)} />
+                  <InputSearch inputKwd = {(keyword) => this.searchKwd(keyword)} />
                   <Product movies = {movies} />
                 </div>
         break
