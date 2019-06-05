@@ -9,7 +9,6 @@ export default class NavBar extends React.PureComponent {
     }
 
     render () {
-        console.log(this.props.pageList)
         return (
             <div className = "flexBox">
                 {this.props.pageList.map((name) => {
@@ -20,6 +19,6 @@ export default class NavBar extends React.PureComponent {
                     )
                 })}
             </div>
-            )
+        )
     }
 }
