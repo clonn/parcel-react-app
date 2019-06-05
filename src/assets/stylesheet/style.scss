@@ -44,11 +44,25 @@
 .prod-info a {
     text-decoration: none;
 }
-
+/*
 .prod-line1 {
     background-color: rgb(255, 255, 231);
 }
 
 .prod-line2 {
     background-color: rgb(238, 238, 238);
+}
+*/
+
+.prod:nth-of-type(odd) {
+    background-color: rgb(255, 255, 231);
+}
+
+.prod:nth-of-type(even) {
+    background-color: rgb(238, 238, 238);
+}
+
+.error-message {
+    color: rgb(248, 2, 2);
+    text-align: center;
 }

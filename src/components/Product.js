@@ -7,22 +7,47 @@ export default class Product extends React.Component {
         super(props);
         this.state = {
             prods: [],
-            totalNum : 0
+            totalNum : 0,
+            error:""
         };
     }
 
     async componentDidMount() {
         const prodInfo = await api.reloadOmdbDatas();
-        const prods = Object.values(prodInfo)[0];
-        const totalNum = Object.values(prodInfo)[1];
+        let prods = [];
+        let errorMsg = "";
+        for (let [key, value] of Object.entries(prodInfo)) {
+            if(key == "Search") {
+                prods = value;
+            }
+            if (key == "Error") {
+                errorMsg = value;
+            }
+        }
         this.setState({
             'prods': prods,
-            'totalNum': totalNum
-        });
+            "error": errorMsg
+        });    
+        
     }
 
     render() {
+        const { error } = this.state;
         const { prods } = this.state;
+
+        let movieList = "";
+        if (error.length == 0 ) {
+            movieList = prods.map((prod, index) => {
+                return (
+                    <li key={index} className="prod">
+                        <span className="prod-info"><img width="120" src={prod.Poster} alt={prod.imdbID} /><span><a href={prod.imdbID} >{prod.Title}</a></span><span>({prod.Year})</span><span>({prod.Type})</span></span>
+                    </li>
+                );
+            })
+        } else {
+            movieList = <li className="error-message" >{error}</li>;
+        }
+
         return(
             <div className="prods">
                 <div className="prods-head">
@@ -31,17 +56,7 @@ export default class Product extends React.Component {
                 </div>
                 <div className="prods-content">
                     <ul>
-                        {prods.map((prod, index) => {
-                            var prodCss = "prod-line1";
-                            if (index % 2 == 1) {
-                                prodCss = "prod-line2";
-                            }
-                            return (
-                                <li key={index} className={prodCss}>
-                                    <span className="prod-info"><img width="120" src={prod.Poster} alt={prod.imdbID} /><span><a href={prod.imdbID} >{prod.Title}</a></span><span>({prod.Year})</span><span>({prod.Type})</span></span>
-                                </li>
-                            );
-                        })}
+                       {movieList}
                     </ul>
                 </div>
             </div>
