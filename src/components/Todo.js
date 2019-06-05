@@ -15,6 +15,11 @@ export default class Todo extends React.Component {
         this.setState({
             'todos': todos
         });
+        this.handleChecked = this.handleChecked.bind(this);
+    }
+
+    handleChecked () {
+        this.setState({completed: !this.state.completed});
     }
 
     render() {
@@ -25,7 +30,7 @@ export default class Todo extends React.Component {
                     {todos.map((todo) => {
                         return (
                             <div id="item" key={todo.id}>
-                                <input type='checkbox' value={todo.id} checked={todo.completed}></input>{todo.id}. {todo.title}
+                                <input type='checkbox' value={todo.id} onChange={this.handleChecked}></input>{todo.id}. {todo.title}
                             </div>
                         );
                     })}
