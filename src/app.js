@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Header from './components/Header';
+import Movietitle from './components/Movietitle';
+
 import api from './api/base';
 
 
@@ -29,6 +31,7 @@ class HelloMessage extends React.Component {
         <div className="container">
             <h1>Hi {this.props.name}</h1>
         </div>
+        <Movietitle todos={todos}/>
       </div>
     );
   }
