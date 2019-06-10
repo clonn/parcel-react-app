@@ -10,6 +10,10 @@ const Header = () => (
                 </a>
             </div>
         </nav>
+        <table className="nav nav-tabs">
+            <td className="active"><a data-toggle="tab" href="#app">app</a></td>
+            <td><a data-toggle="tab" href="#movie">movie</a></td>
+        </table>
     </header>
 )
 
