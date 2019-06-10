@@ -1,0 +1,63 @@
+.verticalCenterFlex {
+    display: flex;
+    justify-content: center;
+}
+.verticalCenterFlex .content {
+    align-self: center;
+}
+
+.verticalAbs {
+    position : relative;
+    margin : auto;
+}
+.verticalAbs .content {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+
+    width : 50%;
+    height : 100%;
+}
+
+.verticalCenter {
+    margin-left : 3%;
+    position : absolute;
+    top : 50%;
+    transform : translate(0, -50%);
+}
+
+
+.horizonCenter {
+    position : absolute;
+    left : 50%;
+    transform : translate(-50%, 0);
+}
+
+.linkNoUnderLine {
+    color : #035daf;
+    text-decoration: none;
+}
+
+.linkNoUnderLine:hover {
+    color : red;
+}
+.listTemplate:hover {
+    zoom : 1.5;
+}
+
+.textCenter {
+    text-align : center;
+}
+.padLeft-5 {
+    padding-left : 5%;
+}
+.padRight-5 {
+    padding-right : 5%;
+}
+.cursorPoint {
+    cursor : pointer;
+}
+.hoverZoom:hover {
+    zoom : 1.5;
+}

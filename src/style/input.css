@@ -1,0 +1,27 @@
+input[type = "search"] {
+    border-radius : 10px;
+    width : 100%;
+    height : 100%;
+    border : 2px solid #bdbdbd;
+    outline : none;
+    font-size: 150%;
+    padding-left:3%;
+}
+input[type = "search"]::-webkit-input-placeholder {
+    color : #bcbcbc;
+    padding : 0 0 0 1%;
+}
+input[type = "search"]::-webkit-search-cancel-button {
+    /* -webkit-appearance: none; */
+
+    background-color: #dedede;
+    margin : 0 1% 0 0;
+    zoom: 1.5;
+    cursor: pointer;
+}
+
+.inputDiv {
+    height: 40px;
+
+    margin : 0 0 2% 0;
+}

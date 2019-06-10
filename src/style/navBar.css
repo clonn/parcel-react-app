@@ -1,0 +1,33 @@
+.flexBox {
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: #f9f10baf;
+    border: 3px solid #123456;
+    border-radius: 15px;
+
+    margin : 0 0 3% 0;
+    /* padding: 0 5% 0 5%; */
+}
+.item {
+    width: 19.8%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-right: 2px solid #f9ae0ba7;
+    border-bottom: 2px solid #f9ae0ba7;
+    border-radius : 13px;
+    
+    justify-content: flex-start;
+    align-items: center;
+
+    cursor: pointer;
+}
+.item:hover {
+    transform: scale(1.05, 1.2);
+
+    background-color: #f9ae0bd4;
+    font-size: 26px;
+}
